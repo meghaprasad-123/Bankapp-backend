@@ -1,0 +1,43 @@
+HTTP Response code
+ 1xx- information
+ 2xx- successful
+ 3xx- redirection
+ 4xx- client error
+ 5xx- server error
+
+JWT Token
+  Install JWT - npm i jsonwebtoken
+  to generate a token - sign()
+
+Middleware
+  It comes in the middle of the request & respone cycle of the node js execution process.
+   1) Application Specific Middleware
+         It has 3 parameters ;  req, res, next
+         used for any change in req & res
+         for entire application
+
+  2) Router Specific Middleware
+         Validate token, for that we use method verify()-jwt token
+         We must import jsonwebtoken
+
+Database Integration
+  1. Install mongoose - npm i mongoose
+
+Asynchronous function resolving - promise
+
+   1) Resolve state - .then()
+   2) Reject state - catch()
+
+CORS - Cross origin resource sharing
+    install cors- npm i cors
+
+    port 4200(angular)-----request------>3000(node)(receive)
+
+Asynchronous call - RxJx - (reactive extension for javascript)
+
+JS - promise
+TS - RxJx(library)
+
+    1)Observable
+       a)resolved - Subscribe()
+       b)reject - catch
