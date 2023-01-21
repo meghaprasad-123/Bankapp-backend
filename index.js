@@ -20,7 +20,7 @@ app.use(express.json())
 
 //give command to share data via cors
 app.use(cors({
-    origin:'http://localhost:4200'
+    origin:['http://localhost:4200','http://192.168.1.100:8080']
 }))
 
 //3. create a port number
@@ -102,7 +102,7 @@ app.post('/register',(req,res)=>{
 //login rqst
 app.post('/login',(req,res)=>{
     console.log(req.body);
-    dataService.login(req.body.acno,req.body.password)
+    dataService.login(req.body.acno,req.body.pswd)
     .then(result=>{
         res.status(result.statusCode).json(result)
 

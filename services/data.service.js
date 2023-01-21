@@ -14,6 +14,7 @@ userDetails={
   }
 
 
+  
 
 const register=(acno,username,password)=>{
   return db.User.findOne({acno})  //data
@@ -89,8 +90,8 @@ const register=(acno,username,password)=>{
 //    }
 
 // }
-const login=(acno,pswd)=>{
-   return db.User.findOne({acno,pswd})  //data
+const login=(acno,password)=>{
+   return db.User.findOne({acno,password})  //data
    .then(user=>{
     if(user){
       currentUser=user.username
