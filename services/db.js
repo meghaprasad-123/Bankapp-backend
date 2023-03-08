@@ -20,7 +20,16 @@ const User=mongoose.model('User',
   transaction:[]
 });
 
+const Loan=mongoose.model('Loan',
+{
+  acno:Number,
+  type:String,
+  amount:Number,
+  interest:Number,
+  duration:Number
+});
+
 //export collection
 module.exports={
-    User
+    User,Loan
 }

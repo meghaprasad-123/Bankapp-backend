@@ -314,6 +314,25 @@ const  withdraw=(acno,pswd,amt)=>{
       })
        }
 
+  const loandetails=(acno)=>{
+    return db.Loan.find({acno})
+    .then (loan=>{
+      if(loan){
+        return{
+          statusCode:200,
+          Loan:loan
+        }
+      }
+      else{
+        return{
+            status:false,
+            statusCode:400,
+            message:'user not found'
+        }
+      }
+    })
+  }
+
 
 
 //to export
@@ -323,5 +342,5 @@ module.exports={
    deposit,
    withdraw,
    getTransaction,
-   deleteAcc
+   deleteAcc,loandetails
 }

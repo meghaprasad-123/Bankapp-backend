@@ -146,3 +146,11 @@ app.delete('/deleteAcc/:acno',(req,res)=>{
         res.status(result.statusCode).json(result);
     })
 })
+
+app.get('/loandetails',(req,res)=>{
+    dataService.loandetails(req.body.acno)
+    .then(result=>{
+        res.status(result.statusCode).json(result);
+    })
+
+})
